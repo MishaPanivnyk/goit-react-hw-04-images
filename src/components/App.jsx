@@ -77,6 +77,7 @@ export default function App() {
   return (
     <div className={s.App}>
       <Searchbar onSubmit={onSubmit} />
+      {error && <p>Ups! Something went wrong!</p>}
       {images.length !== 0 && (
         <ImageGallery images={images} openModal={openModal} />
       )}
